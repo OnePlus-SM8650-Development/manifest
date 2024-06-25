@@ -35,10 +35,10 @@
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="3892d2c393135d568c9140c801623530eea4104c" upstream="refs/heads/ks-kernel.lnx.3.0.r12-rel">
     <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="."/>
   </project>
-  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="253bed667924121af77a9dc1470e8404ca642012" upstream="refs/heads/kernel.lnx.6.1.r11-rel">
+  <!--<project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="253bed667924121af77a9dc1470e8404ca642012" upstream="refs/heads/kernel.lnx.6.1.r11-rel">
     <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
     <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
-  </project>
+  </project>-->
   <project remote="clo-la" name="kernel_platform/build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" revision="c33d2ea84b503e681accf1f7e321de69c7e85a05" upstream="refs/heads/ks-kernel.lnx.3.0.r12-rel"/>
   <project remote="clo-la" name="kernel_platform/external/bazel-skylib" path="kernel_platform/external/bazel-skylib" revision="f998e5dc13c03f0eae9e373263d3afff0932c738" upstream="refs/heads/ks-kernel.lnx.3.0.r12-rel"/>
   <project remote="clo-la" name="kernel_platform/external/dtc" path="kernel_platform/external/dtc" revision="6aa78bad656ffc106bb909774fee5fc2d86d4949" upstream="refs/heads/kernel.build.lnx.2.0.r11-rel"/>
@@ -61,5 +61,8 @@
 
   <!-- Oneplus deps -->
   <!--<project remote="oos" name="android_kernel_modules_and_devicetree_oneplus_sm8650" path="../" revision="sm8650_u_14.0.0_oneplus12" />-->
-  <project remote="oos" name="android_kernel_oneplus_sm8650" path="kernel_platform/msm-kernel" revision="sm8650_u_14.0.0_oneplus12" />
+  <project remote="oos" name="android_kernel_oneplus_sm8650" path="kernel_platform/msm-kernel" revision="sm8650_u_14.0.0_oneplus12" >
+      <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE"/>
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
+  </project>
 </manifest>
